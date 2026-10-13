@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Generalapp</title>
+
+<!-- Pantalla de inicio / modo app -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Generalapp">
+<meta name="theme-color" content="#12312b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAFi0lEQVR4nO3cO3ZUOxCFYbUXIyDxIIgg81wYHnNxBpEH4YQpQMA60Db9OI8qadfW/6X3YlpHvwu5V1unJuLj50+/Rr8G7Pfzx8tp9GtorbVhL4KAvY0KvOtfSsRz6hl3+l9ExDiXHXfaFydk3JIVdvgXJWRsER32Q+QXI2ZsFd1MyHcHISNCxLQ+PKGJGVEiWjoUNDEj2tGmdo14QkYPe44gmyc0MaOXPa1tCpqY0dvW5lYHTcwYZUt7oe9DA6OtCprpjNHWNng3aGKGijUt3gyamKHmXpOcoWHlatBMZ6i61ebFoIkZ6q41ypEDVv4LmumMKi61yoSGlTdBM51RzftmmdCwQtCw8jdojhuo6rxdJjSsEDSsPLTGcQP1LQ0zoWGFoGGFoGHl5Hx+fn1+Hv0SZD0+PY1+CSnsgibi7ZzitgiaiONUj7t00IScp2rYZX8oJOZcVZ9vyaCrPuxqKj7nUkeOig/YRZUjSJkJTcxjVXn+JYKu8jDdVdgH+aArPMSZqO+HfNDAFtJBq0+DWSnvi2zQyg8NuvsjGbTqw8JbivskGTSwl1zQit/1uE5tv+SCBo4gaFiR+ixHr3++vnx7vfrfvn997PIaIimsR+WzHh9Gv4Cebm38+/+nQthu64kwRdBrNv7an1EMwW09kWTO0FnHjT2bH/nno6muR+XdDpmgM0RtnkrUbuvJYBt09KaNjsBtPVlsg8acLIPOmj6jpprbejJZBo152QWdPXV6TzW39WSzCxpzI2hYIWhYIWhYIWhYIWhYsQs6+9NkvT+t5raebHZBY26WQWdNnVHTzG09mSyDxrxsg46ePqOnmdt6stgG3Vrcpqlsvtt6MlgH3drxzVPbfLf1RJvil2SXTdzyyTLljXdbT6Qpgl6sCaHSxrutJ8JUQS/cNtltPUdMGXQvTM7+CDoBNxqNQ9CBuNFoPPu37XpRvdFoNgQdgBuNdBD0QdxopIWgYYWgD+BGIz0EDSsEvRM3GmkiaFghaFghaFghaFghaFghaFgh6J240UgTQcMKQR/AjUZ6CBpWCPogbjTSQtABuNFIB0EH4UYjDfySbCBuNBqPoBNwo9E4BJ2IaPubMmi3yem2niOmCtrtRiO39USYImi3G43c1hPJ/m07txuN3NYTzTpotxuN3NaTwTZotxuN3NaTxTZozMkyaLcbjdzWk8kyaMzLLmi3G43c1pPNLmjMjaBhhaBhhaBhhaBhhaBhxS5otxuN3NaTzS5ozM0yaLcbjdzWk8kyaMzLNmi3G43c1pPFNujW/G40cltPBpmgH5+eUr6u241GquvJ2r+tpvglWbcbjdzWE2mKoBduNxq5rSfC6ePnT79Gv4hzr8/Po18CNlI5brQmdIYGIhA0rMgFrfTPF+5T2y+5oIEjJINW+67HZYr7JBl0a5oPC/+o7o9s0K3pPrTZKe+LdNDAVvJBK0+DGanvh3zQrek/xFlU2IcSQbdW42E6q/L85T7LsQaf9+inSsiLMhP6XLWHXFXF51wy6NZqPuxKqj7fkkeO9ziCxKka8sIi6HPEvV31iM+dWmvNLeoFcV/nFPHi54+Xk/WvYDluGm4r+0MhcAlBw8pDa3/OHqNfCHDE0jATGlYIGlb+Bs2xA1Wdt8uEhhWChpU3QXPsQDXvm2VCw8p/QTOlUcWlVpnQsHIxaKY01F1r9OqEJmqoutUmRw5YuRk0Uxpq7jV5d0ITNVSsaXHVkYOoMdraBjlDw8rqoJnSGGVLe5smNFGjt63NbT5yEDV62dPaoThd7/PAWEeG5qEfCpnWiHa0qcPvchA1okS0FBojRxDsETkUQ9+HZlpjq+hm0gJkWuOWrOGXPlEJG+ey/xXvekQg7jn1PIoOO/MSt7dRP0/J/BBH4LWpvCHwG9mYKB14/xHEAAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAFi0lEQVR4nO3cO3ZUOxCFYbUXIyDxIIgg81wYHnNxBpEH4YQpQMA60Db9OI8qadfW/6X3YlpHvwu5V1unJuLj50+/Rr8G7Pfzx8tp9GtorbVhL4KAvY0KvOtfSsRz6hl3+l9ExDiXHXfaFydk3JIVdvgXJWRsER32Q+QXI2ZsFd1MyHcHISNCxLQ+PKGJGVEiWjoUNDEj2tGmdo14QkYPe44gmyc0MaOXPa1tCpqY0dvW5lYHTcwYZUt7oe9DA6OtCprpjNHWNng3aGKGijUt3gyamKHmXpOcoWHlatBMZ6i61ebFoIkZ6q41ypEDVv4LmumMKi61yoSGlTdBM51RzftmmdCwQtCw8jdojhuo6rxdJjSsEDSsPLTGcQP1LQ0zoWGFoGGFoGHl5Hx+fn1+Hv0SZD0+PY1+CSnsgibi7ZzitgiaiONUj7t00IScp2rYZX8oJOZcVZ9vyaCrPuxqKj7nUkeOig/YRZUjSJkJTcxjVXn+JYKu8jDdVdgH+aArPMSZqO+HfNDAFtJBq0+DWSnvi2zQyg8NuvsjGbTqw8JbivskGTSwl1zQit/1uE5tv+SCBo4gaFiR+ixHr3++vnx7vfrfvn997PIaIimsR+WzHh9Gv4Cebm38+/+nQthu64kwRdBrNv7an1EMwW09kWTO0FnHjT2bH/nno6muR+XdDpmgM0RtnkrUbuvJYBt09KaNjsBtPVlsg8acLIPOmj6jpprbejJZBo152QWdPXV6TzW39WSzCxpzI2hYIWhYIWhYIWhYIWhYsQs6+9NkvT+t5raebHZBY26WQWdNnVHTzG09mSyDxrxsg46ePqOnmdt6stgG3Vrcpqlsvtt6MlgH3drxzVPbfLf1RJvil2SXTdzyyTLljXdbT6Qpgl6sCaHSxrutJ8JUQS/cNtltPUdMGXQvTM7+CDoBNxqNQ9CBuNFoPPu37XpRvdFoNgQdgBuNdBD0QdxopIWgYYWgD+BGIz0EDSsEvRM3GmkiaFghaFghaFghaFghaFghaFgh6J240UgTQcMKQR/AjUZ6CBpWCPogbjTSQtABuNFIB0EH4UYjDfySbCBuNBqPoBNwo9E4BJ2IaPubMmi3yem2niOmCtrtRiO39USYImi3G43c1hPJ/m07txuN3NYTzTpotxuN3NaTwTZotxuN3NaTxTZozMkyaLcbjdzWk8kyaMzLLmi3G43c1pPNLmjMjaBhhaBhhaBhhaBhhaBhxS5otxuN3NaTzS5ozM0yaLcbjdzWk8kyaMzLNmi3G43c1pPFNujW/G40cltPBpmgH5+eUr6u241GquvJ2r+tpvglWbcbjdzWE2mKoBduNxq5rSfC6ePnT79Gv4hzr8/Po18CNlI5brQmdIYGIhA0rMgFrfTPF+5T2y+5oIEjJINW+67HZYr7JBl0a5oPC/+o7o9s0K3pPrTZKe+LdNDAVvJBK0+DGanvh3zQrek/xFlU2IcSQbdW42E6q/L85T7LsQaf9+inSsiLMhP6XLWHXFXF51wy6NZqPuxKqj7fkkeO9ziCxKka8sIi6HPEvV31iM+dWmvNLeoFcV/nFPHi54+Xk/WvYDluGm4r+0MhcAlBw8pDa3/OHqNfCHDE0jATGlYIGlb+Bs2xA1Wdt8uEhhWChpU3QXPsQDXvm2VCw8p/QTOlUcWlVpnQsHIxaKY01F1r9OqEJmqoutUmRw5YuRk0Uxpq7jV5d0ITNVSsaXHVkYOoMdraBjlDw8rqoJnSGGVLe5smNFGjt63NbT5yEDV62dPaoThd7/PAWEeG5qEfCpnWiHa0qcPvchA1okS0FBojRxDsETkUQ9+HZlpjq+hm0gJkWuOWrOGXPlEJG+ey/xXvekQg7jn1PIoOO/MSt7dRP0/J/BBH4LWpvCHwG9mYKB14/xHEAAAAAElFTkSuQmCC">
+
+<style>
+  :root{
+    --bg:#12312b;          /* verde mesa profundo */
+    --bg2:#0d2621;
+    --surface:#fbf8f2;     /* papel cálido */
+    --surface-soft:#f1ebdd;
+    --ink:#23201c;
+    --ink-soft:#6f675b;
+    --line:#e3dccb;
+    --line-strong:#cfc6b1;
+    --cel:#2d9cdb;         /* celeste: acción / columna actual */
+    --cel-deep:#1b7fb8;
+    --gold:#e6a935;        /* servida / ganador */
+    --gold-deep:#c98a1e;
+    --red:#c34a3b;         /* tachado */
+    --shadow:0 10px 30px rgba(0,0,0,.28);
+    --radius:16px;
+    font-size:16px;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    background:
+      radial-gradient(120% 60% at 50% -10%, #1a4238 0%, var(--bg) 46%, var(--bg2) 100%);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;
+    min-height:100vh;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    padding-top:env(safe-area-inset-top);
+    padding-bottom:env(safe-area-inset-bottom);
+    overflow-x:hidden;
+  }
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  input{font-family:inherit;}
+
+  /* ---------- Barra superior ---------- */
+  .appbar{
+    display:flex;align-items:center;gap:10px;
+    padding:14px 16px 12px;
+    color:var(--surface);
+  }
+  .brand{display:flex;align-items:center;gap:10px;min-width:0;}
+  .brand .die{
+    width:34px;height:34px;border-radius:9px;background:var(--surface);
+    position:relative;flex:0 0 auto;box-shadow:0 2px 0 rgba(0,0,0,.15);
+  }
+  .brand .die::before,.brand .die::after,.brand .die i{
+    content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:var(--cel);
+  }
+  .brand .die::before{top:7px;left:7px;}
+  .brand .die::after{bottom:7px;right:7px;}
+  .brand .die i{top:50%;left:50%;transform:translate(-50%,-50%);}
+  .brand h1{
+    font-size:1.35rem;font-weight:800;letter-spacing:-.02em;margin:0;
+    line-height:1;white-space:nowrap;
+  }
+  .brand h1 b{color:var(--gold);font-weight:800;}
+  .appbar .spacer{flex:1;}
+  .iconbtn{
+    width:42px;height:42px;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.1);color:var(--surface);font-size:1.3rem;
+    transition:background .15s;
+  }
+  .iconbtn:active{background:rgba(255,255,255,.22);}
+
+  /* ---------- Pantalla de inicio ---------- */
+  .home{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:0 16px 18px;}
+  .home-back{
+    display:none;align-items:center;gap:7px;color:rgba(255,255,255,.85);
+    font-weight:700;font-size:.92rem;padding:6px 2px 12px;
+  }
+  .home-back.show{display:flex;}
+  .home-hero{text-align:center;color:var(--surface);padding:8px 10px 20px;}
+  .home-hero .bigdie{
+    width:76px;height:76px;border-radius:20px;background:var(--surface);
+    position:relative;margin:0 auto 14px;box-shadow:0 6px 0 rgba(0,0,0,.18);
+  }
+  .home-hero .bigdie span{position:absolute;width:13px;height:13px;border-radius:50%;background:var(--cel);}
+  .home-hero .bigdie .d1{top:16px;left:16px;}
+  .home-hero .bigdie .d2{top:16px;right:16px;}
+  .home-hero .bigdie .d3{top:50%;left:50%;transform:translate(-50%,-50%);}
+  .home-hero .bigdie .d4{bottom:16px;left:16px;}
+  .home-hero .bigdie .d5{bottom:16px;right:16px;}
+  .home-hero h1{font-size:2.1rem;font-weight:800;letter-spacing:-.02em;margin:0;}
+  .home-hero h1 b{color:var(--gold);}
+  .home-hero p{margin:5px 0 0;color:rgba(255,255,255,.72);font-size:.92rem;}
+
+  .card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:16px 15px;}
+  .card h2{margin:0 0 12px;font-size:1.1rem;font-weight:800;}
+  .home-player{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+  .home-player .pn{
+    width:30px;height:30px;border-radius:9px;background:var(--cel);color:#fff;
+    font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+  }
+  .home-player input{
+    flex:1;min-width:0;padding:13px 12px;border-radius:11px;border:none;
+    background:var(--surface-soft);font-size:1rem;font-weight:600;color:var(--ink);outline:none;
+  }
+  .home-player input:focus{box-shadow:inset 0 0 0 2px var(--cel);}
+  .home-player .del{
+    width:38px;height:38px;border-radius:10px;background:var(--surface-soft);color:var(--red);
+    font-size:1.2rem;display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+  }
+  .home-player .del:active{background:var(--red);color:#fff;}
+  .home-add{
+    width:100%;margin-top:4px;padding:13px;border-radius:11px;
+    background:transparent;border:2px dashed var(--line-strong);color:var(--cel-deep);
+    font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;
+  }
+  .home-add:disabled{opacity:.4;}
+  .home-add:active{background:var(--surface-soft);}
+
+  .modes{display:grid;gap:12px;margin-top:16px;}
+  .mode-btn{
+    background:var(--surface);border-radius:18px;box-shadow:var(--shadow);
+    padding:17px 16px;display:flex;align-items:center;gap:15px;text-align:left;
+    border-left:6px solid var(--cel);transition:transform .08s;
+  }
+  .mode-btn:active{transform:scale(.985);}
+  .mode-btn.tour{border-left-color:var(--gold);}
+  .mode-btn .micon{
+    width:52px;height:52px;border-radius:14px;background:#eaf5fc;
+    display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex:0 0 auto;
+  }
+  .mode-btn.tour .micon{background:#fbf1dc;}
+  .mode-btn .mtxt h3{margin:0;font-size:1.12rem;font-weight:800;}
+  .mode-btn .mtxt p{margin:3px 0 0;font-size:.82rem;color:var(--ink-soft);line-height:1.3;}
+  .mode-btn .go{margin-left:auto;color:var(--line-strong);font-size:1.5rem;font-weight:700;flex:0 0 auto;}
+  .home-opts{
+    width:100%;margin-top:12px;padding:13px;border-radius:12px;
+    background:rgba(255,255,255,.08);color:var(--surface);
+    font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;gap:8px;
+  }
+  .home-opts:active{background:rgba(255,255,255,.16);}
+
+  /* ---------- Opciones ---------- */
+  .opt-group{margin-bottom:16px;}
+  .opt-label{font-weight:800;font-size:1rem;margin-bottom:8px;}
+  .opt-desc{font-size:.8rem;color:var(--ink-soft);margin:0 0 9px;line-height:1.35;}
+  .seg{display:flex;gap:8px;}
+  .seg button{
+    flex:1;padding:13px 8px;border-radius:11px;background:var(--surface-soft);
+    font-weight:700;font-size:.95rem;border:2px solid transparent;color:var(--ink);
+  }
+  .seg button.on{border-color:var(--cel);background:#eaf5fc;color:var(--cel-deep);}
+  .seg button.on.gold{border-color:var(--gold);background:#fbf1dc;color:var(--gold-deep);}
+
+  .combo .mult{font-size:.95rem;font-weight:800;color:var(--gold-deep);align-self:center;}
+
+  /* ---------- Pestañas ---------- */
+  .tabs{
+    display:flex;gap:6px;margin:0 16px 8px;
+    background:rgba(0,0,0,.22);border-radius:14px;padding:5px;
+  }
+  .tab{
+    flex:1;padding:11px 8px;border-radius:10px;
+    color:rgba(255,255,255,.72);font-weight:700;font-size:.98rem;
+    display:flex;align-items:center;justify-content:center;gap:7px;transition:all .15s;
+  }
+  .tab.active{background:var(--surface);color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.18);}
+  .tab .badge{
+    min-width:21px;height:21px;border-radius:11px;padding:0 6px;
+    background:var(--cel);color:#fff;font-size:.74rem;font-weight:800;
+    display:inline-flex;align-items:center;justify-content:center;
+  }
+  .tab.active .badge{background:var(--cel);}
+
+  /* ---------- Vista Torneo ---------- */
+  .tview{
+    flex:1;margin:0 12px 12px;background:var(--surface);
+    border-radius:var(--radius);box-shadow:var(--shadow);
+    overflow:auto;-webkit-overflow-scrolling:touch;padding:4px 0 14px;
+  }
+  .tview .t-head{padding:16px 18px 6px;}
+  .tview .t-head h2{margin:0;font-size:1.25rem;font-weight:800;}
+  .tview .t-head p{margin:3px 0 0;font-size:.82rem;color:var(--ink-soft);}
+
+  .lb{width:100%;border-collapse:collapse;}
+  .lb th{
+    font-size:.68rem;color:var(--ink-soft);font-weight:700;text-transform:uppercase;
+    letter-spacing:.03em;padding:8px 6px;border-bottom:2px solid var(--line-strong);
+  }
+  .lb th.l{text-align:left;padding-left:16px;}
+  .lb td{padding:13px 6px;border-bottom:1px solid var(--line);font-size:1rem;text-align:center;}
+  .lb td.pos{width:40px;font-weight:800;color:var(--ink-soft);}
+  .lb td.who{text-align:left;padding-left:16px;font-weight:700;}
+  .lb td.pts{font-weight:800;font-size:1.15rem;}
+  .lb tr.lead td{background:rgba(230,169,53,.14);}
+  .lb tr.lead td.pos{color:var(--gold-deep);}
+  .lb .won{color:var(--gold-deep);font-weight:800;}
+  .lb .crown{margin-right:3px;}
+
+  .history{padding:4px 16px 0;}
+  .history h3{font-size:.95rem;margin:18px 0 6px;}
+  .grow{
+    display:flex;align-items:center;gap:10px;padding:11px 2px;border-bottom:1px solid var(--line);
+    font-size:.92rem;
+  }
+  .grow .gnum{
+    width:30px;height:30px;border-radius:9px;background:var(--surface-soft);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;flex:0 0 auto;
+  }
+  .grow .gwin{font-weight:700;}
+  .grow .gwin .srvtag{color:var(--gold-deep);font-weight:800;margin-left:4px;}
+  .grow .gpts{margin-left:auto;color:var(--ink-soft);font-weight:700;white-space:nowrap;}
+
+  .t-empty{padding:40px 24px;text-align:center;color:var(--ink-soft);}
+  .t-empty .big{font-size:2.6rem;margin-bottom:10px;}
+  .t-empty p{font-size:.95rem;line-height:1.5;margin:0;}
+
+  /* ---------- Banner ganador ---------- */
+  .winner{
+    margin:0 16px 6px;border-radius:14px;
+    background:linear-gradient(90deg,var(--gold),var(--gold-deep));
+    color:#3a2a06;font-weight:800;
+    padding:12px 16px;display:none;align-items:center;gap:10px;
+    box-shadow:var(--shadow);animation:pop .3s ease;
+  }
+  .winner.show{display:flex;}
+  .winner #winnerText{flex:1;min-width:0;}
+  .winner .savebtn{
+    background:#3a2a06;color:var(--gold);font-weight:800;font-size:.85rem;
+    padding:9px 13px;border-radius:10px;white-space:nowrap;flex:0 0 auto;
+  }
+  .winner .savebtn:active{background:#271c04;}
+  .winner .x{font-weight:700;opacity:.75;font-size:1.3rem;padding:0 2px 0 4px;flex:0 0 auto;}
+  @keyframes pop{from{transform:scale(.96);opacity:0;}to{transform:scale(1);opacity:1;}}
+
+  /* ---------- Tabla ---------- */
+  .board-wrap{
+    flex:1;margin:4px 12px 12px;
+    background:var(--surface);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  table{border-collapse:collapse;width:100%;}
+  th,td{padding:0;text-align:center;}
+
+  thead th{
+    position:sticky;top:0;z-index:5;
+    background:var(--surface);
+    border-bottom:2px solid var(--line-strong);
+  }
+  .cat-head{
+    position:sticky;left:0;z-index:6;
+    background:var(--surface);
+    border-right:2px solid var(--line-strong);
+    text-align:left;
+  }
+  .cat-head .mini{
+    font-size:.7rem;color:var(--ink-soft);font-weight:600;
+    padding:10px 12px 8px;line-height:1.1;
+  }
+
+  /* cabecera jugador */
+  .phead{min-width:82px;max-width:140px;}
+  .phead .pwrap{display:flex;flex-direction:column;align-items:center;padding:22px 6px 9px;position:relative;}
+  .pname{
+    width:100%;text-align:center;border:none;background:transparent;
+    font-size:.95rem;font-weight:700;color:var(--ink);
+    padding:4px 2px;border-radius:8px;outline:none;min-width:0;
+  }
+  .pname:focus{background:var(--surface-soft);box-shadow:inset 0 0 0 2px var(--cel);}
+  .premove{
+    position:absolute;top:3px;right:4px;width:22px;height:22px;border-radius:50%;
+    background:var(--line);color:var(--ink-soft);font-size:.8rem;line-height:1;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .premove:active{background:var(--red);color:#fff;}
+  .add-col{min-width:46px;}
+  .addbtn{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--cel);color:#fff;font-size:1.4rem;font-weight:700;
+    display:flex;align-items:center;justify-content:center;margin:4px auto;
+    box-shadow:0 3px 8px rgba(45,156,219,.45);
+  }
+  .addbtn:disabled{opacity:.35;box-shadow:none;}
+
+  /* filas categoría */
+  tbody tr{border-bottom:1px solid var(--line);}
+  .cat-cell{
+    position:sticky;left:0;z-index:4;
+    background:var(--surface);
+    border-right:2px solid var(--line-strong);
+    text-align:left;
+    display:flex;align-items:center;gap:9px;
+    padding:0 10px;height:56px;min-width:146px;
+  }
+  tbody tr:nth-child(even) .cat-cell{background:#fdfbf6;}
+  tbody tr:nth-child(even) td.score{background:#fdfbf6;}
+  .face{
+    font-size:1.7rem;line-height:1;color:var(--cel-deep);width:26px;text-align:center;flex:0 0 auto;
+  }
+  .cat-cell.num-cell{justify-content:center;gap:0;}
+  .face.big-face{font-size:2.5rem;width:auto;}
+  .cat-cell.major-cell{height:76px;justify-content:center;}
+  .major-cell .cat-name{align-items:center;text-align:center;}
+  .combo{display:flex;gap:5px;margin-bottom:4px;}
+  .combo .grp{font-size:1.55rem;line-height:1;color:var(--cel-deep);letter-spacing:0;white-space:nowrap;}
+  .cat-name{display:flex;flex-direction:column;line-height:1.05;}
+  .cat-name .n{font-weight:700;font-size:.95rem;}
+  .cat-name .pts{font-size:.68rem;color:var(--ink-soft);}
+  tr.major .cat-cell .n{color:var(--cel-deep);}
+
+  /* celdas de puntaje */
+  td.score{
+    height:56px;border-left:1px solid var(--line);
+    font-size:1.25rem;font-weight:700;position:relative;
+    transition:background .12s;
+  }
+  td.score .inner{
+    width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+    gap:3px;
+  }
+  td.score.empty .inner{color:var(--line-strong);font-weight:600;font-size:1.3rem;}
+  td.score.scratched .inner{color:var(--red);}
+  td.score .star{color:var(--gold);font-size:.95rem;margin-left:1px;}
+  td.score .crown{font-size:1rem;}
+  td.score:active{background:var(--surface-soft);}
+  td.score.col-lead{background:rgba(230,169,53,.14)!important;}
+
+  /* fila total */
+  tr.total-row{border-top:3px solid var(--ink);}
+  tr.total-row .cat-cell{background:var(--ink);color:var(--surface);min-width:146px;height:60px;}
+  tr.total-row .cat-cell .n{color:var(--surface);font-size:1rem;font-weight:800;letter-spacing:.02em;}
+  td.total{
+    height:60px;background:var(--ink);color:var(--surface);
+    font-size:1.5rem;font-weight:800;border-left:1px solid rgba(255,255,255,.12);
+  }
+  td.total.win{color:var(--gold);}
+  td.total .crown{font-size:1rem;display:block;line-height:1;margin-top:-2px;}
+
+  /* ---------- Hoja inferior (sheet) ---------- */
+  .scrim{
+    position:fixed;inset:0;background:rgba(10,20,17,.55);
+    opacity:0;pointer-events:none;transition:opacity .2s;z-index:20;
+  }
+  .scrim.show{opacity:1;pointer-events:auto;}
+  .sheet{
+    position:fixed;left:0;right:0;bottom:0;z-index:21;
+    background:var(--surface);
+    border-radius:22px 22px 0 0;
+    padding:10px 18px calc(22px + env(safe-area-inset-bottom));
+    transform:translateY(102%);transition:transform .26s cubic-bezier(.2,.8,.2,1);
+    box-shadow:0 -10px 40px rgba(0,0,0,.3);
+    max-width:620px;margin:0 auto;
+  }
+  .sheet.show{transform:translateY(0);}
+  .grab{width:44px;height:5px;border-radius:3px;background:var(--line-strong);margin:4px auto 14px;}
+  .sheet-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .sheet-head .face{font-size:2.3rem;width:auto;color:var(--cel-deep);}
+  .sheet-head h3{margin:0;font-size:1.25rem;font-weight:800;}
+  .sheet-head p{margin:2px 0 0;font-size:.8rem;color:var(--ink-soft);}
+
+  .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;}
+  .opt{
+    border-radius:13px;background:var(--surface-soft);
+    padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;
+    border:2px solid transparent;transition:transform .08s;
+  }
+  .opt:active{transform:scale(.95);}
+  .opt .big{font-size:1.5rem;font-weight:800;line-height:1;}
+  .opt .lbl{font-size:.68rem;color:var(--ink-soft);font-weight:600;}
+  .opt.sel{border-color:var(--cel);background:#eaf5fc;}
+  .opt.full-opt .big{color:var(--cel-deep);}
+  .opt.servida-opt{background:#fbf1dc;}
+  .opt.servida-opt .big{color:var(--gold-deep);}
+  .opt.servida-opt.sel{border-color:var(--gold);}
+  .opt.scratch-opt{background:#f7e6e3;}
+  .opt.scratch-opt .big{color:var(--red);font-size:1.3rem;}
+  .opt.clear-opt{background:#eceae3;}
+  .opt.clear-opt .big{color:var(--ink-soft);font-size:1.1rem;}
+  .opts.two{grid-template-columns:repeat(2,1fr);}
+  .opts.majors{grid-template-columns:repeat(2,1fr);}
+
+  .hint{font-size:.74rem;color:var(--ink-soft);margin:14px 2px 2px;line-height:1.35;}
+
+  /* menú */
+  .menu .item{
+    display:flex;align-items:center;gap:12px;width:100%;text-align:left;
+    padding:15px 8px;font-size:1.02rem;font-weight:600;border-radius:12px;
+  }
+  .menu .item:active{background:var(--surface-soft);}
+  .menu .item .ic{font-size:1.2rem;width:26px;text-align:center;}
+  .menu .item.danger{color:var(--red);}
+  .menu .sep{height:1px;background:var(--line);margin:4px 0;}
+
+  /* reglas */
+  .rules h4{margin:16px 0 6px;font-size:.95rem;}
+  .rules table{width:100%;font-size:.86rem;}
+  .rules td{text-align:left;padding:6px 4px;border-bottom:1px solid var(--line);}
+  .rules td:last-child{text-align:right;font-weight:700;white-space:nowrap;}
+  .rules .srv{color:var(--gold-deep);font-weight:700;}
+  .rules p{font-size:.82rem;color:var(--ink-soft);line-height:1.45;}
+
+  .confirm-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;}
+  .btn{padding:15px;border-radius:13px;font-weight:700;font-size:1rem;text-align:center;}
+  .btn.ghost{background:var(--surface-soft);color:var(--ink);}
+  .btn.solid{background:var(--red);color:#fff;}
+  .btn.cel{background:var(--cel);color:#fff;}
+
+  .tag{font-size:.78rem;color:var(--ink-soft);margin:6px 2px 2px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition:none!important;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="appbar">
+    <div class="brand">
+      <span class="die"><i></i></span>
+      <h1>General<b>app</b></h1>
+    </div>
+    <span class="spacer"></span>
+    <button class="iconbtn" id="homeBtn" aria-label="Inicio" style="display:none">&#8962;</button>
+    <button class="iconbtn" id="rulesBtn" aria-label="Cómo se juega">?</button>
+    <button class="iconbtn" id="menuBtn" aria-label="Menú">&#8942;</button>
+  </div>
+
+  <div class="tabs" id="tabs" style="display:none">
+    <button class="tab active" data-view="game">Partida</button>
+    <button class="tab" data-view="tournament">Torneo <span class="badge" id="tabCount">0</span></button>
+  </div>
+
+  <div class="winner" id="winner">
+    <span id="winnerText"></span>
+    <button class="savebtn" id="winnerSave">Guardar en torneo</button>
+    <button class="x" id="winnerClose" aria-label="Cerrar">&times;</button>
+  </div>
+
+  <!-- Pantalla de inicio -->
+  <div class="home" id="screenHome"></div>
+
+  <div class="board-wrap" id="screenGame" style="display:none">
+    <table id="board"></table>
+  </div>
+
+  <div class="tview" id="screenTournament" style="display:none"></div>
+
+  <!-- Scrim + sheet reutilizable -->
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true">
+    <div class="grab"></div>
+    <div id="sheetBody"></div>
+  </div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Definición del juego ---------- */
+  var MAX_PLAYERS = 6, MIN_PLAYERS = 1;
+  var KEY = "generalapp_v1";
+
+  var NUMS = [
+    {id:"c1", name:"Unos",    face:"\u2680", type:"num", f:1},
+    {id:"c2", name:"Doses",   face:"\u2681", type:"num", f:2},
+    {id:"c3", name:"Treses",  face:"\u2682", type:"num", f:3},
+    {id:"c4", name:"Cuatros", face:"\u2683", type:"num", f:4},
+    {id:"c5", name:"Cincos",  face:"\u2684", type:"num", f:5},
+    {id:"c6", name:"Seises",  face:"\u2685", type:"num", f:6}
+  ];
+  var MAJ_FIXED = [
+    {id:"esc", name:"Escalera", type:"major", base:20, srv:25, combo:["\u2680\u2681\u2682\u2683\u2684"]},
+    {id:"ful", name:"Full",     type:"major", base:30, srv:35, combo:["\u2683\u2683\u2683","\u2681\u2681"]},
+    {id:"pok", name:"P\u00f3ker",type:"major", base:40, srv:45, combo:["\u2684\u2684\u2684\u2684","\u2681"]}
+  ];
+  function buildCats(){
+    var g = (state.options && state.options.generala) || 60;
+    var list = NUMS.concat(MAJ_FIXED);
+    list.push({id:"gen", name:"Generala", type:"major", base:g, srv:g, win:true, combo:["\u2685\u2685\u2685\u2685\u2685"]});
+    if(state.options && state.options.dobleGenerala){
+      list.push({id:"dgen", name:"Doble Generala", type:"major", base:100, srv:100, win:true, mult:"\u00d72", combo:["\u2685\u2685\u2685\u2685\u2685"]});
+    }
+    return list;
+  }
+
+  function pid(){ return "p"+Math.random().toString(36).slice(2,8); }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+  function load(){ try{ var s=localStorage.getItem(KEY); return s?JSON.parse(s):null; }catch(e){ return null; } }
+
+  /* ---------- Estado ---------- */
+  var state = load() || {
+    players:[ {id:pid(), name:"Jugador 1"}, {id:pid(), name:"Jugador 2"} ],
+    scores:{}, winnerDismissed:false
+  };
+  if(!state.tournament) state.tournament = { games: [] };          // partidas del torneo
+  if(!state.options) state.options = { generala:50, dobleGenerala:true };
+  var CATS = buildCats();
+  function rebuildCats(){ CATS = buildCats(); }
+  var view = "game";
+
+  function cellOf(pid, cid){
+    if(!state.scores[pid]) state.scores[pid]={};
+    return state.scores[pid][cid] || null;
+  }
+  function setCell(pidv, cid, data){
+    if(!state.scores[pidv]) state.scores[pidv]={};
+    if(data===null) delete state.scores[pidv][cid];
+    else state.scores[pidv][cid]=data;
+    save();
+  }
+
+  function totalFor(pidv){
+    var t=0, sc=state.scores[pidv]||{};
+    CATS.forEach(function(cat){ var c=sc[cat.id]; if(c && !c.scratched) t+=(c.val||0); });
+    return t;
+  }
+  function repriceWinCats(){
+    CATS.forEach(function(cat){
+      if(cat.type==="major" && cat.win){
+        state.players.forEach(function(p){
+          var sc=state.scores[p.id]; if(sc && sc[cat.id] && !sc[cat.id].scratched) sc[cat.id].val=cat.base;
+        });
+      }
+    });
+  }
+  function filledCount(pidv){
+    var n=0, sc=state.scores[pidv]||{};
+    for(var i=0;i<CATS.length;i++){ if(sc[CATS[i].id]) n++; }
+    return n;
+  }
+  function allDone(){
+    return state.players.length>0 && state.players.every(function(p){ return filledCount(p.id)===CATS.length; });
+  }
+  function anyScore(){
+    return state.players.some(function(p){ return filledCount(p.id)>0; });
+  }
+
+  /* ---------- Torneo ---------- */
+  function gameWinners(){
+    var srv=[];
+    state.players.forEach(function(p){
+      var hit=false;
+      CATS.forEach(function(cat){ if(cat.win){ var c=cellOf(p.id,cat.id); if(c&&c.servida&&!c.scratched) hit=true; } });
+      if(hit) srv.push(p.id);
+    });
+    if(srv.length) return {winners:srv, servida:true};
+    var best=-Infinity;
+    state.players.forEach(function(p){ var t=totalFor(p.id); if(t>best) best=t; });
+    var w=state.players.filter(function(p){ return totalFor(p.id)===best; }).map(function(p){ return p.id; });
+    return {winners:w, servida:false};
+  }
+
+  function recordGame(){
+    if(!state.players.length) return;
+    var totals={}, names={};
+    state.players.forEach(function(p){ totals[p.id]=totalFor(p.id); names[p.id]=p.name; });
+    var gw=gameWinners();
+    state.tournament.games.push({ date:Date.now(), totals:totals, names:names, winners:gw.winners, servida:gw.servida });
+    state.scores={}; state.winnerDismissed=false;
+    save();
+    showView("tournament");
+    render(); renderTournament();
+  }
+
+  function standings(){
+    var rows = state.players.map(function(p){
+      var pj=0, won=0, pts=0;
+      state.tournament.games.forEach(function(g){
+        if(Object.prototype.hasOwnProperty.call(g.totals,p.id)){
+          pj++; pts+=g.totals[p.id];
+          if(g.winners.indexOf(p.id)>=0) won++;
+        }
+      });
+      return {id:p.id, name:p.name, pj:pj, won:won, pts:pts};
+    });
+    rows.sort(function(a,b){ return b.won-a.won || b.pts-a.pts || a.name.localeCompare(b.name); });
+    return rows;
+  }
+
+  /* ---------- Render tabla ---------- */
+  var board = document.getElementById("board");
+
+  function render(){
+    var P = state.players;
+    var leadId = leader();
+
+    var html = "<thead><tr>";
+    html += '<th class="cat-head"><div class="mini">Categor\u00eda</div></th>';
+    P.forEach(function(p,i){
+      html += '<th class="phead"><div class="pwrap">';
+      if(P.length>MIN_PLAYERS)
+        html += '<button class="premove" data-remove="'+i+'" aria-label="Quitar jugador">&times;</button>';
+      html += '<input class="pname" data-name="'+i+'" value="'+escAttr(p.name)+'" maxlength="14" '+
+              'aria-label="Nombre del jugador '+(i+1)+'"></div></th>';
+    });
+    if(P.length<MAX_PLAYERS)
+      html += '<th class="add-col"><button class="addbtn" id="addBtn" aria-label="Agregar jugador">+</button></th>';
+    html += "</tr></thead><tbody>";
+
+    CATS.forEach(function(cat){
+      var isMajor = cat.type==="major";
+      html += '<tr class="'+(isMajor?"major":"")+'">';
+      if(isMajor){
+        var ptsLabel = cat.win ? cat.base+" pts" : cat.base+" / "+cat.srv+" serv.";
+        var combo = (cat.combo||[]).map(function(g){return '<span class="grp">'+g+'</span>';}).join('');
+        if(cat.mult) combo += '<span class="mult">'+cat.mult+'</span>';
+        html += '<td><div class="cat-cell major-cell">'+
+                  '<span class="cat-name">'+
+                    '<span class="combo">'+combo+'</span>'+
+                    '<span class="n">'+cat.name+'</span>'+
+                    '<span class="pts">'+ptsLabel+'</span>'+
+                  '</span></div></td>';
+      } else {
+        html += '<td><div class="cat-cell num-cell">'+
+                  '<span class="face big-face">'+cat.face+'</span></div></td>';
+      }
+      P.forEach(function(p,i){
+        var c = cellOf(p.id, cat.id);
+        var cls="score", inner="";
+        if(!c){ cls+=" empty"; inner="+"; }
+        else if(c.scratched){ cls+=" scratched"; inner="\u2715"; }
+        else {
+          inner = c.val;
+          if(c.servida && !cat.win) inner += '<span class="star">\u2605</span>';
+          if(cat.win && c.servida) inner += '<span class="crown">\ud83d\udc51</span>';
+        }
+        if(leadId && p.id===leadId && allDone()) cls+=" col-lead";
+        html += '<td class="'+cls+'" data-cell="'+p.id+'|'+cat.id+'"><div class="inner">'+inner+'</div></td>';
+      });
+      if(P.length<MAX_PLAYERS) html += '<td></td>';
+      html += "</tr>";
+    });
+
+    /* total */
+    html += '<tr class="total-row"><td><div class="cat-cell"><span class="n">TOTAL</span></div></td>';
+    P.forEach(function(p){
+      var t=totalFor(p.id);
+      var win = allDone() && p.id===leadId;
+      html += '<td class="total'+(win?" win":"")+'">'+(win?'<span class="crown">\ud83d\udc51</span>':'')+t+'</td>';
+    });
+    if(P.length<MAX_PLAYERS) html += '<td></td>';
+    html += "</tr></tbody>";
+
+    board.innerHTML = html;
+    updateWinner();
+    var tc=document.getElementById("tabCount"); if(tc) tc.textContent = state.tournament.games.length;
+  }
+
+  function leader(){
+    if(state.players.length===0) return null;
+    var best=-1, id=null, tie=false;
+    state.players.forEach(function(p){
+      var t=totalFor(p.id);
+      if(t>best){ best=t; id=p.id; tie=false; }
+      else if(t===best){ tie=true; }
+    });
+    return tie? null : id;
+  }
+
+  function updateWinner(){
+    var w=document.getElementById("winner");
+    var txt=document.getElementById("winnerText");
+    document.getElementById("winnerSave").style.display = (state.mode==="tournament") ? "" : "none";
+    // Generala (o Doble Generala) servida = victoria inmediata
+    var servidaWin=null, servidaCat=null;
+    state.players.forEach(function(p){
+      CATS.forEach(function(cat){
+        if(cat.win){ var c=cellOf(p.id,cat.id); if(c && c.servida && !c.scratched){ servidaWin=p; servidaCat=cat; } }
+      });
+    });
+    if(servidaWin && !state.winnerDismissed){
+      txt.innerHTML = "\ud83c\udf89 \u00a1"+escHtml(servidaWin.name)+" hizo "+escHtml(servidaCat.name)+" servida y gana la partida!";
+      w.classList.add("show"); return;
+    }
+    if(allDone() && !state.winnerDismissed){
+      var id=leader();
+      if(id){
+        var p=state.players.filter(function(x){return x.id===id;})[0];
+        txt.innerHTML = "\ud83d\udc51 \u00a1Gan\u00f3 "+escHtml(p.name)+" con "+totalFor(id)+" puntos!";
+      } else {
+        txt.innerHTML = "\ud83e\udd1d \u00a1Empate! Mir\u00e1 los totales.";
+      }
+      w.classList.add("show"); return;
+    }
+    w.classList.remove("show");
+  }
+
+  /* ---------- Pestañas / vistas ---------- */
+  var screenGame = document.getElementById("screenGame");
+  var screenTour = document.getElementById("screenTournament");
+  var screenHome = document.getElementById("screenHome");
+  var tabsBar = document.getElementById("tabs");
+  var homeBtn = document.getElementById("homeBtn");
+  var winnerEl = document.getElementById("winner");
+  var tabEls = document.querySelectorAll(".tab");
+
+  function showView(v){
+    view = v;
+    var home = v==="home", game = v==="game", tour = v==="tournament";
+    screenHome.style.display = home ? "" : "none";
+    screenGame.style.display = game ? "" : "none";
+    screenTour.style.display = tour ? "" : "none";
+    tabsBar.style.display = (!home && state.mode==="tournament") ? "" : "none";
+    winnerEl.style.display = game ? "" : "none";
+    homeBtn.style.display = home ? "none" : "";
+    if(home) renderHome();
+    if(game){ render(); }
+    if(tour) renderTournament();
+    tabEls.forEach(function(t){ t.classList.toggle("active", t.getAttribute("data-view")===v); });
+  }
+  tabEls.forEach(function(t){
+    t.addEventListener("click", function(){ showView(t.getAttribute("data-view")); });
+  });
+
+  /* ---------- Pantalla de inicio ---------- */
+  function renderHome(){
+    var inProgress = state.mode && (anyScore() || state.tournament.games.length>0);
+    var h = '<button class="home-back'+(inProgress?" show":"")+'" id="homeBack">\u25c2 Volver a lo que estaba jugando</button>'+
+      '<div class="home-hero"><div class="bigdie">'+
+        '<span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span><span class="d5"></span>'+
+      '</div><h1>General<b>app</b></h1><p>El tanteador de la Generala</p></div>'+
+      '<div class="card"><h2>\u00bfQui\u00e9nes juegan?</h2><div id="homePlayers">';
+    state.players.forEach(function(p,i){
+      h += '<div class="home-player"><span class="pn">'+(i+1)+'</span>'+
+             '<input data-hn="'+i+'" value="'+escAttr(p.name)+'" maxlength="14" placeholder="Jugador '+(i+1)+'">'+
+             (state.players.length>2 ? '<button class="del" data-hdel="'+i+'" aria-label="Quitar">\ud83d\uddd1</button>' : '')+
+           '</div>';
+    });
+    h += '</div><button class="home-add" id="homeAdd"'+(state.players.length>=MAX_PLAYERS?' disabled':'')+'>\u2795 Agregar jugador</button></div>'+
+      '<button class="home-opts" id="homeOpts">\u2699\ufe0f Opciones \u2014 '+optionsSummary()+'</button>'+
+      '<div class="modes">'+
+        '<button class="mode-btn single" data-mode="single"><span class="micon">\ud83c\udfb2</span>'+
+          '<span class="mtxt"><h3>Partida individual</h3><p>Una sola partida. Gana quien hace m\u00e1s puntos.</p></span>'+
+          '<span class="go">\u203a</span></button>'+
+        '<button class="mode-btn tour" data-mode="tournament"><span class="micon">\ud83c\udfc6</span>'+
+          '<span class="mtxt"><h3>Torneo</h3><p>Varias partidas seguidas con tabla general acumulada.</p></span>'+
+          '<span class="go">\u203a</span></button>'+
+      '</div>';
+    screenHome.innerHTML = h;
+
+    if(inProgress) screenHome.querySelector("#homeBack").onclick=function(){ showView("game"); };
+    screenHome.querySelectorAll("[data-hn]").forEach(function(inp){
+      inp.addEventListener("input", function(){ state.players[+inp.getAttribute("data-hn")].name=inp.value; save(); });
+    });
+    screenHome.querySelectorAll("[data-hdel]").forEach(function(b){
+      b.onclick=function(){
+        var i=+b.getAttribute("data-hdel");
+        if(state.players.length<=2) return;
+        delete state.scores[state.players[i].id];
+        state.players.splice(i,1); save(); renderHome();
+      };
+    });
+    var optb=screenHome.querySelector("#homeOpts");
+    if(optb) optb.onclick=function(){ showOptions(); };
+    var addb=screenHome.querySelector("#homeAdd");
+    if(addb) addb.onclick=function(){
+      if(state.players.length>=MAX_PLAYERS) return;
+      state.players.push({id:pid(), name:"Jugador "+(state.players.length+1)});
+      save(); renderHome();
+    };
+    screenHome.querySelectorAll("[data-mode]").forEach(function(b){
+      b.onclick=function(){ startMode(b.getAttribute("data-mode")); };
+    });
+  }
+
+  function optionsSummary(){
+    return "Generala "+state.options.generala+" pts \u00b7 Doble: "+(state.options.dobleGenerala?"S\u00ed":"No");
+  }
+
+  function showOptions(){
+    var o=state.options;
+    var h='<div class="sheet-head"><span class="face">\u2699\ufe0f</span><div><h3>Opciones</h3><p>Reglas de la partida</p></div></div>'+
+      '<div class="opt-group"><div class="opt-label">Valor de la Generala</div>'+
+        '<div class="seg">'+
+          '<button data-o="g50" class="'+(o.generala===50?"on":"")+'">50 puntos</button>'+
+          '<button data-o="g60" class="'+(o.generala===60?"on":"")+'">60 puntos</button>'+
+        '</div></div>'+
+      '<div class="opt-group"><div class="opt-label">Doble Generala</div>'+
+        '<p class="opt-desc">Categor\u00eda extra que vale 100 puntos (una segunda generala). Disponible en algunas versiones del juego.</p>'+
+        '<div class="seg">'+
+          '<button data-o="dgOff" class="'+(!o.dobleGenerala?"on":"")+'">Desactivada</button>'+
+          '<button data-o="dgOn" class="'+(o.dobleGenerala?"on gold":"")+'">Activada</button>'+
+        '</div></div>'+
+      '<div class="confirm-btns" style="grid-template-columns:1fr"><button class="btn cel" data-x="ok">Listo</button></div>';
+    openSheet(h);
+    function apply(fn){
+      fn(); rebuildCats(); repriceWinCats(); save();
+      if(view==="game") render(); else if(view==="tournament") renderTournament(); else if(view==="home") renderHome();
+      showOptions();
+    }
+    sheetBody.querySelector('[data-o="g50"]').onclick=function(){ apply(function(){ state.options.generala=50; }); };
+    sheetBody.querySelector('[data-o="g60"]').onclick=function(){ apply(function(){ state.options.generala=60; }); };
+    sheetBody.querySelector('[data-o="dgOff"]').onclick=function(){ apply(function(){
+      state.options.dobleGenerala=false;
+      state.players.forEach(function(p){ if(state.scores[p.id]) delete state.scores[p.id].dgen; });
+    }); };
+    sheetBody.querySelector('[data-o="dgOn"]').onclick=function(){ apply(function(){ state.options.dobleGenerala=true; }); };
+    sheetBody.querySelector('[data-x="ok"]').onclick=closeSheet;
+  }
+
+  function startMode(m){
+    state.players.forEach(function(p,i){ if(!(p.name||"").trim()) p.name="Jugador "+(i+1); });
+    var hasScores = anyScore(), hasTour = state.tournament.games.length>0;
+    function go(){
+      state.mode=m; state.scores={}; state.winnerDismissed=false;
+      if(m==="tournament") state.tournament={games:[]};
+      save(); showView("game");
+    }
+    if(!(hasScores || (m==="tournament" && hasTour))){ go(); return; }
+    var msg = m==="tournament"
+      ? (hasTour ? "Vas a empezar un torneo nuevo: se borra la tabla general actual"+(hasScores?" y la partida en curso":"")+"."
+                 : "Se descarta la partida en curso para empezar el torneo.")
+      : "Se descarta la partida en curso para empezar una nueva.";
+    var h='<div class="sheet-head"><span class="face">'+(m==="tournament"?"\ud83c\udfc6":"\ud83c\udfb2")+'</span>'+
+          '<div><h3>'+(m==="tournament"?"Empezar torneo":"Partida individual")+'</h3></div></div>'+
+          '<p class="tag">'+msg+'</p>'+
+          '<div class="confirm-btns"><button class="btn ghost" data-x="no">Cancelar</button>'+
+          '<button class="btn cel" data-x="si">Empezar</button></div>';
+    openSheet(h);
+    sheetBody.querySelector('[data-x="no"]').onclick=closeSheet;
+    sheetBody.querySelector('[data-x="si"]').onclick=function(){ closeSheet(); go(); };
+  }
+
+  function renderTournament(){
+    var games = state.tournament.games;
+    document.getElementById("tabCount").textContent = games.length;
+
+    if(games.length===0){
+      screenTour.innerHTML =
+        '<div class="t-empty"><div class="big">\ud83c\udfc6</div>'+
+        '<p>Todav\u00eda no guardaste ninguna partida.<br>Jug\u00e1 una y toc\u00e1 <b>Guardar en torneo</b> para empezar la tabla general.</p></div>';
+      return;
+    }
+
+    var rows = standings();
+    var leadWon = rows.length ? rows[0].won : 0;
+    var leadPts = rows.length ? rows[0].pts : 0;
+
+    var h = '<div class="t-head"><h2>Tabla del torneo</h2>'+
+            '<p>'+games.length+' partida'+(games.length>1?"s":"")+' jugada'+(games.length>1?"s":"")+'</p></div>';
+
+    h += '<table class="lb"><thead><tr>'+
+           '<th>#</th><th class="l">Jugador</th><th>PJ</th><th>\ud83c\udfc6</th><th>Puntos</th>'+
+         '</tr></thead><tbody>';
+    rows.forEach(function(r,i){
+      var isLead = games.length>0 && r.won===leadWon && r.pts===leadPts && leadWon+leadPts>0;
+      h += '<tr class="'+(isLead?"lead":"")+'">'+
+             '<td class="pos">'+(isLead?'\ud83d\udc51':(i+1))+'</td>'+
+             '<td class="who">'+escHtml(r.name)+'</td>'+
+             '<td>'+r.pj+'</td>'+
+             '<td class="won">'+r.won+'</td>'+
+             '<td class="pts">'+r.pts+'</td>'+
+           '</tr>';
+    });
+    h += '</tbody></table>';
+
+    /* historial, más reciente arriba */
+    h += '<div class="history"><h3>Historial</h3>';
+    games.slice().reverse().forEach(function(g, idx){
+      var num = games.length - idx;
+      var wnames = g.winners.map(function(id){ return g.names[id]||"?"; }).join(", ");
+      var wpts = g.winners.length ? g.totals[g.winners[0]] : 0;
+      h += '<div class="grow">'+
+             '<span class="gnum">'+num+'</span>'+
+             '<span class="gwin">'+escHtml(wnames)+
+               (g.servida?'<span class="srvtag">Generala servida \ud83d\udc51</span>':'')+
+             '</span>'+
+             '<span class="gpts">'+wpts+' pts</span>'+
+           '</div>';
+    });
+    h += '</div>';
+
+    screenTour.innerHTML = h;
+  }
+
+  /* ---------- Hoja inferior ---------- */
+  var scrim=document.getElementById("scrim"), sheet=document.getElementById("sheet"),
+      sheetBody=document.getElementById("sheetBody");
+
+  function openSheet(htmlContent){
+    sheetBody.innerHTML=htmlContent;
+    scrim.classList.add("show"); sheet.classList.add("show");
+  }
+  function closeSheet(){
+    scrim.classList.remove("show"); sheet.classList.remove("show");
+  }
+  scrim.addEventListener("click", closeSheet);
+
+  /* --- editor de puntaje de una celda --- */
+  function openCell(pidv, cid){
+    var cat = CATS.filter(function(c){return c.id===cid;})[0];
+    var player = state.players.filter(function(p){return p.id===pidv;})[0];
+    var cur = cellOf(pidv,cid);
+    var h = '<div class="sheet-head"><span class="face">'+cat.face+'</span>'+
+            '<div><h3>'+escHtml(cat.name)+'</h3><p>'+escHtml(player.name)+'</p></div></div>';
+
+    if(cat.type==="num"){
+      h += '<div class="opts">';
+      for(var n=1;n<=5;n++){
+        var val=n*cat.f;
+        var sel = (cur && !cur.scratched && cur.val===val)?" sel":"";
+        h += '<button class="opt'+sel+'" data-set="num|'+val+'">'+
+               '<span class="big">'+val+'</span>'+
+               '<span class="lbl">'+n+" dado"+(n>1?"s":"")+'</span></button>';
+      }
+      var scrSel = (cur && cur.scratched)?" sel":"";
+      h += '<button class="opt scratch-opt'+scrSel+'" data-set="scratch">'+
+             '<span class="big">\u2715</span><span class="lbl">Tachar (0)</span></button>';
+      h += '</div>';
+      h += '<div class="hint">El puntaje es la cantidad de dados de ese n\u00famero, multiplicada por el n\u00famero. Si no lo sacaste, toc\u00e1 <b>Tachar</b>.</div>';
+    } else {
+      var madeSel  = (cur && !cur.scratched && !cur.servida)?" sel":"";
+      var srvSel   = (cur && !cur.scratched && cur.servida)?" sel":"";
+      var scSel    = (cur && cur.scratched)?" sel":"";
+      h += '<div class="opts majors">';
+      h += '<button class="opt full-opt'+madeSel+'" data-set="made">'+
+             '<span class="big">'+cat.base+'</span><span class="lbl">Lo hizo</span></button>';
+      if(cat.win){
+        h += '<button class="opt servida-opt'+srvSel+'" data-set="servida">'+
+               '<span class="big">'+cat.base+' \ud83d\udc51</span><span class="lbl">Servida \u2192 gana</span></button>';
+      } else {
+        h += '<button class="opt servida-opt'+srvSel+'" data-set="servida">'+
+               '<span class="big">'+cat.srv+' \u2605</span><span class="lbl">Servida (+5)</span></button>';
+      }
+      h += '<button class="opt scratch-opt'+scSel+'" data-set="scratch">'+
+             '<span class="big">\u2715</span><span class="lbl">Tachar (0)</span></button>';
+      h += '</div>';
+      h += '<div class="hint"><b>Servida</b> = la hiciste en el primer tiro. '+
+           (cat.win? 'La Generala servida gana la partida al instante.' : 'Suma 5 puntos extra.')+'</div>';
+    }
+
+    if(cur){
+      h += '<button class="opt clear-opt" style="margin-top:10px;width:100%" data-set="clear">'+
+             '<span class="big">\u21ba Borrar este casillero</span></button>';
+    }
+
+    openSheet(h);
+
+    sheetBody.querySelectorAll("[data-set]").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var act = btn.getAttribute("data-set");
+        if(act==="scratch"){
+          setCell(pidv,cid,{val:0,scratched:true,servida:false});
+        } else if(act==="clear"){
+          setCell(pidv,cid,null);
+        } else if(act==="made"){
+          setCell(pidv,cid,{val:cat.base,scratched:false,servida:false});
+        } else if(act==="servida"){
+          setCell(pidv,cid,{val:cat.srv,scratched:false,servida:true});
+        } else if(act.indexOf("num|")===0){
+          setCell(pidv,cid,{val:parseInt(act.split("|")[1],10),scratched:false,servida:false});
+        }
+        state.winnerDismissed=false; save();
+        closeSheet(); render();
+      });
+    });
+  }
+
+  /* ---------- Interacciones de la tabla ---------- */
+  board.addEventListener("click", function(e){
+    var cell = e.target.closest("[data-cell]");
+    if(cell){
+      var parts=cell.getAttribute("data-cell").split("|");
+      openCell(parts[0], parts[1]); return;
+    }
+    if(e.target.id==="addBtn"){ addPlayer(); return; }
+    var rem = e.target.closest("[data-remove]");
+    if(rem){ confirmRemove(parseInt(rem.getAttribute("data-remove"),10)); return; }
+  });
+
+  board.addEventListener("input", function(e){
+    var inp=e.target.closest("[data-name]");
+    if(inp){
+      var i=parseInt(inp.getAttribute("data-name"),10);
+      state.players[i].name = inp.value;
+      save();
+      updateWinner(); // por si hay banner con el nombre
+    }
+  });
+  // evitar que al tocar el nombre se abra nada raro; seleccionar todo al enfocar
+  board.addEventListener("focusin", function(e){
+    if(e.target.classList.contains("pname")) setTimeout(function(){ try{e.target.select();}catch(_){}} ,0);
+  });
+
+  function addPlayer(){
+    if(state.players.length>=MAX_PLAYERS) return;
+    state.players.push({id:pid(), name:"Jugador "+(state.players.length+1)});
+    save(); render();
+  }
+
+  function confirmRemove(i){
+    var p=state.players[i];
+    var h='<div class="sheet-head"><span class="face">\u2715</span>'+
+          '<div><h3>Quitar jugador</h3><p>'+escHtml(p.name)+'</p></div></div>'+
+          '<p class="tag">Se borran sus puntajes de esta partida.</p>'+
+          '<div class="confirm-btns">'+
+            '<button class="btn ghost" data-x="no">Cancelar</button>'+
+            '<button class="btn solid" data-x="si">Quitar</button></div>';
+    openSheet(h);
+    sheetBody.querySelector('[data-x="no"]').onclick=closeSheet;
+    sheetBody.querySelector('[data-x="si"]').onclick=function(){
+      delete state.scores[p.id];
+      state.players.splice(i,1);
+      state.winnerDismissed=false; save(); closeSheet(); render();
+    };
+  }
+
+  /* ---------- Menú ---------- */
+  document.getElementById("menuBtn").addEventListener("click", function(){
+    var isTour = state.mode==="tournament";
+    var h='<div class="sheet-head"><span class="face">\u2630</span><div><h3>Men\u00fa</h3></div></div>'+
+      '<div class="menu">';
+    if(isTour){
+      h += '<button class="item" data-m="save"><span class="ic">\ud83c\udfc6</span>Guardar partida en el torneo</button>'+
+           '<button class="item" data-m="tour"><span class="ic">\ud83d\udcca</span>Ver tabla del torneo</button>'+
+           '<div class="sep"></div>';
+    }
+    h += '<button class="item" data-m="opts"><span class="ic">\u2699\ufe0f</span>Opciones</button>'+
+         '<button class="item" data-m="add"><span class="ic">\u2795</span>Agregar jugador</button>'+
+         '<button class="item" data-m="rules"><span class="ic">\ud83c\udfb2</span>C\u00f3mo se juega</button>'+
+         '<div class="sep"></div>'+
+         '<button class="item" data-m="home"><span class="ic">\u2302</span>Inicio / cambiar jugadores</button>'+
+         '<button class="item" data-m="reset"><span class="ic">\u21ba</span>Nueva partida (sin guardar)</button>';
+    if(isTour){
+      h += '<button class="item danger" data-m="newtour"><span class="ic">\ud83d\uddd1</span>Reiniciar torneo</button>';
+    }
+    h += '</div>';
+    openSheet(h);
+    if(isTour){
+      sheetBody.querySelector('[data-m="save"]').onclick=function(){ closeSheet(); confirmSaveGame(); };
+      sheetBody.querySelector('[data-m="tour"]').onclick=function(){ closeSheet(); showView("tournament"); };
+      sheetBody.querySelector('[data-m="newtour"]').onclick=function(){ confirmNewTournament(); };
+    }
+    sheetBody.querySelector('[data-m="opts"]').onclick=function(){ closeSheet(); showOptions(); };
+    sheetBody.querySelector('[data-m="add"]').onclick=function(){ closeSheet(); addPlayer(); };
+    sheetBody.querySelector('[data-m="rules"]').onclick=function(){ showRules(); };
+    sheetBody.querySelector('[data-m="home"]').onclick=function(){ closeSheet(); showView("home"); };
+    sheetBody.querySelector('[data-m="reset"]').onclick=function(){ confirmReset(); };
+  });
+
+  function confirmSaveGame(){
+    if(!anyScore()){
+      var h0='<div class="sheet-head"><span class="face">\ud83c\udfc6</span>'+
+             '<div><h3>Guardar partida</h3><p>No hay puntajes cargados</p></div></div>'+
+             '<p class="tag">Carg\u00e1 al menos un puntaje antes de guardar la partida en el torneo.</p>'+
+             '<div class="confirm-btns" style="grid-template-columns:1fr"><button class="btn cel" data-x="ok">Entendido</button></div>';
+      openSheet(h0); sheetBody.querySelector('[data-x="ok"]').onclick=closeSheet; return;
+    }
+    var incompleto = !allDone();
+    var gw=gameWinners();
+    var wname = gw.winners.map(function(id){ var p=state.players.filter(function(x){return x.id===id;})[0]; return p?p.name:"?"; }).join(", ");
+    var h='<div class="sheet-head"><span class="face">\ud83c\udfc6</span>'+
+          '<div><h3>Guardar en el torneo</h3><p>Gana: '+escHtml(wname)+' \u00b7 '+(gw.winners.length?totalFor(gw.winners[0]):0)+' pts</p></div></div>'+
+          (incompleto?'<p class="tag">\u26a0\ufe0f La partida no est\u00e1 completa. Se guardar\u00e1 con los puntajes actuales.</p>'
+                     :'<p class="tag">Se suma a la tabla general y se limpia el tablero para la pr\u00f3xima partida.</p>')+
+          '<div class="confirm-btns">'+
+            '<button class="btn ghost" data-x="no">Cancelar</button>'+
+            '<button class="btn cel" data-x="si">Guardar partida</button></div>';
+    openSheet(h);
+    sheetBody.querySelector('[data-x="no"]').onclick=closeSheet;
+    sheetBody.querySelector('[data-x="si"]').onclick=function(){ closeSheet(); recordGame(); };
+  }
+
+  function confirmNewTournament(){
+    var n=state.tournament.games.length;
+    var h='<div class="sheet-head"><span class="face">\ud83d\uddd1</span>'+
+          '<div><h3>Reiniciar torneo</h3><p>'+n+' partida'+(n===1?"":"s")+' en la tabla</p></div></div>'+
+          '<p class="tag">Se borra toda la tabla general del torneo. Los jugadores y la partida actual se mantienen.</p>'+
+          '<div class="confirm-btns">'+
+            '<button class="btn ghost" data-x="no">Cancelar</button>'+
+            '<button class="btn solid" data-x="si">Reiniciar torneo</button></div>';
+    openSheet(h);
+    sheetBody.querySelector('[data-x="no"]').onclick=closeSheet;
+    sheetBody.querySelector('[data-x="si"]').onclick=function(){
+      state.tournament.games=[]; save(); closeSheet(); renderTournament();
+      if(view==="tournament") showView("tournament");
+    };
+  }
+
+  function confirmReset(){
+    var h='<div class="sheet-head"><span class="face">\u21ba</span>'+
+          '<div><h3>Nueva partida</h3><p>Se borran todos los puntajes</p></div></div>'+
+          '<p class="tag">Los nombres de los jugadores se mantienen.</p>'+
+          '<div class="confirm-btns">'+
+            '<button class="btn ghost" data-x="no">Cancelar</button>'+
+            '<button class="btn solid" data-x="si">Empezar de nuevo</button></div>';
+    openSheet(h);
+    sheetBody.querySelector('[data-x="no"]').onclick=closeSheet;
+    sheetBody.querySelector('[data-x="si"]').onclick=function(){
+      state.scores={}; state.winnerDismissed=false; save(); closeSheet(); render();
+    };
+  }
+
+  /* ---------- Reglas ---------- */
+  document.getElementById("rulesBtn").addEventListener("click", showRules);
+  function showRules(){
+    var h='<div class="sheet-head"><span class="face">\ud83c\udfb2</span><div><h3>C\u00f3mo se juega</h3>'+
+          '<p>Puntajes de la Generala</p></div></div>'+
+      '<div class="rules">'+
+        '<p>Cada jugador tira hasta 3 veces por turno y completa una categor\u00eda por vuelta. Toc\u00e1 un casillero para cargar el puntaje o <b>tachar</b> si no lo hiciste.</p>'+
+        '<h4>N\u00fameros</h4>'+
+        '<p>Cantidad de dados de ese n\u00famero \u00d7 el n\u00famero. Ej: tres 6 = 18 pts.</p>'+
+        '<h4>Juegos mayores</h4>'+
+        '<table>'+
+          '<tr><td>Escalera (1-2-3-4-5 \u00f3 2-3-4-5-6)</td><td>20 <span class="srv">\u00b725 serv.</span></td></tr>'+
+          '<tr><td>Full (3 iguales + par)</td><td>30 <span class="srv">\u00b735 serv.</span></td></tr>'+
+          '<tr><td>P\u00f3ker (4 iguales)</td><td>40 <span class="srv">\u00b745 serv.</span></td></tr>'+
+          '<tr><td>Generala (5 iguales)</td><td>'+state.options.generala+' \ud83d\udc51</td></tr>'+
+          (state.options.dobleGenerala?'<tr><td>Doble Generala (5 iguales otra vez)</td><td>100 \ud83d\udc51</td></tr>':'')+
+        '</table>'+
+        '<p><b>Servida</b> = lograda en el primer tiro. Suma 5 puntos extra en los juegos mayores (menos la Generala). La <b>Generala servida</b> gana la partida al instante.</p>'+
+        '<p>Gana quien sume m\u00e1s puntos al completar las '+CATS.length+' categor\u00edas.</p>'+
+      '</div>'+
+      '<div class="confirm-btns" style="grid-template-columns:1fr"><button class="btn cel" data-x="ok">Entendido</button></div>';
+    openSheet(h);
+    sheetBody.querySelector('[data-x="ok"]').onclick=closeSheet;
+  }
+
+  /* ---------- Inicio ---------- */
+  document.getElementById("homeBtn").addEventListener("click", function(){ showView("home"); });
+
+  /* ---------- Banner: guardar / cerrar ---------- */
+  document.getElementById("winnerSave").addEventListener("click", function(){ confirmSaveGame(); });
+  document.getElementById("winnerClose").addEventListener("click", function(){
+    state.winnerDismissed=true; save(); updateWinner();
+  });
+
+  /* ---------- utils ---------- */
+  function escHtml(s){ return (s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+  function escAttr(s){ return escHtml(s).replace(/'/g,"&#39;"); }
+
+  /* ---------- init ---------- */
+  render();
+  document.getElementById("tabCount").textContent = state.tournament.games.length;
+  showView(state.mode ? "game" : "home");
+})();
+</script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("./service-worker.js").catch(function(){});
+    });
+  }
+</script>
+</body>
+</html>
